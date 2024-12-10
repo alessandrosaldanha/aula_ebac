@@ -1,0 +1,249 @@
+*{
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0;
+    font-family: Roboto, sans-serif;
+}
+/*////////////////////////  TITULO DO SITE STYLES ////////////////*/
+.headertitulo {
+    max-width: 1025px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header .headertitulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header form, header h1 {
+    margin: 0;
+}
+
+header {
+    margin-bottom: 56px;
+    padding: 16px 0 0;
+    border-bottom: 1px solid #ccc ;
+}
+
+.submenu {
+    display: none;
+    border: 1px solid red;
+    position: absolute;
+    left: 0;
+    width: 300px;
+    top: 100%;
+    background-color: #FFFFFF;
+}
+
+.menu > li {
+    float: left;
+    list-style: none;
+    padding: 16px;
+    border-top: 4px solid transparent;
+    position: relative;
+}
+
+.submenu li {
+    display: block;
+    padding: 8px;
+}
+
+.clear {
+    clear: both;
+}
+
+.menu li:hover .submenu {
+    display: block;
+}
+
+.menu li:hover {
+    border-color: red;
+}
+
+/*////////////////////////////////////////////// CONTEUDO DA PAGINA \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+
+.conteudo {
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+.noticias img {
+    max-width: 100%;
+}
+.destaque {
+    margin-bottom: 56px;
+}
+
+.destaque .noticias a {
+    display: flex;
+    font-size: 2em;
+}
+
+.destaque .noticias img {
+    margin-right: 8px;
+}
+
+section h2 {
+    margin-bottom: 32px;
+}
+
+aside {
+    padding-left: 40px;
+}
+
+aside .noticias {
+    margin-bottom: 24px;
+}
+
+.noticia {
+    display: grid;
+    grid-template-columns: repeat(3, 32.6%);
+    column-gap: 1%;
+    row-gap: 5%;
+}
+/*/////////////////////////////// Footer /////////////////////////// */
+
+footer {
+    margin-top: 56px;
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.footer-content h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+}
+
+.footer-content p {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.footer-content .socials {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-content .socials li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.footer-content .socials a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+/* ////////////////////// CONTEUDO RESPONSIVO /////////////////////*/
+
+@media screen and (max-width: 767px){
+/*//////////////// Menu //////////////////////*/
+    header div.headertitulo {
+        flex-direction: column;
+      
+    }
+    
+    .submenu {
+        display: block;
+        width: 100%;
+        position: relative;
+        border: none;
+    }
+    .menu {
+        display: none;
+    }
+
+    .menu > li {
+        clear: both;
+    }
+
+    .submenu li {
+        display: block;
+        padding: 8px;
+    }
+    .botao-menu {
+        display: flex;
+        justify-content: center;
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+
+    .botao-menu button {
+        padding: 8px;
+    }
+
+/* ////////////////// Conteudo ////////////////////// */    
+    .conteudo {
+        display: block;    
+    }
+
+    .headertitulo {
+        max-width: 90%;
+    }
+
+    .destaque .noticias a {
+        display: block;
+        font-size: 1.5em;
+    }
+    
+    .destaque .noticias img {
+        margin-right: 0;
+    }
+
+    .noticia {
+        display: block;
+    }
+
+    .noticia .noticias {
+        margin-bottom: 32px;
+    }
+    
+    aside {
+        padding-left: 0;
+    }
+}
+
+/* /////////////////////////////////////////////////////////////////////////////////////////*/
+
+@media screen and (min-width:768px) and (max-width:1023px) {
+    .headertitulo {
+        max-width: 90%;
+    }
+
+    .botao-menu {
+        display: none;
+    }
+
+    .destaque .noticias a {
+        font-size: 1.5em;
+    }
+
+    .noticia {
+        grid-template-columns: repeat(2, 49%);
+    }
+}
+
+/* ////////////////////////////////////// Novo Midia ////////////////////////////// */
+
+@media screen and (min-width:1024px) {
+
+    .botao-menu {
+        display: none;
+    }
+
+}
